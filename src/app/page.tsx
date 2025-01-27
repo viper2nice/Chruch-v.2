@@ -15,7 +15,7 @@ export default function ChurchLandingPage() {
             <div className="text-xl md:text-2xl font-bold text-gray-800">Light House Baptive Church - Bronx</div>
             {/* Mobile Menu Button */}
             <button 
-              className="md:hidden"
+              className="md:hidden bg-darkgray text-white p-2 rounded-md hover:bg-gray-900 transition duration-300"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -51,7 +51,7 @@ export default function ChurchLandingPage() {
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">Welcome to Light House Baptive Church - Bronx</h1>
           <p className="text-lg md:text-xl text-gray-600 mb-8">A place of worship, community, and spiritual growth</p>
-          <a href="#contact" className="bg-gray-800 text-white py-2 px-6 rounded-full hover:bg-gray-700 transition duration-300">Join Us</a>
+          <a href="#contact" className="bg-black text-white py-2 px-6 rounded-full hover:bg-gray-900 transition duration-300">Join Us</a>
         </div>
       </section>
 
@@ -94,7 +94,7 @@ export default function ChurchLandingPage() {
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
               <MapPin className="w-12 h-12 text-gray-700 mb-4" />
               <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Community Outreach</h3>
-              <p className="text-gray-600">We regularly organize community service events to help those in need.</p>
+              <p className="text-gray-600">We regularly organize community service event every third Saturday to help those in need.</p>
             </div>
           </div>
         </div>
@@ -107,8 +107,8 @@ export default function ChurchLandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
               <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Summer Bible Camp</h3>
-              <p className="text-gray-600 mb-2">Join us for a week of fun and learning at our annual Summer Bible Camp.</p>
-              <p className="text-gray-700">Date: July 15-20, 2023</p>
+              <p className="text-gray-600 mb-2">Join us for a weekend at IFC Conference 2025. Theme: A passion for Christ.</p>
+              <p className="text-gray-700">Date: May 24-26, 2023</p>
             </div>
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
               <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Community Outreach Day</h3>
