@@ -12,7 +12,7 @@ export default function ChurchLandingPage() {
       <header className="bg-gray-200 py-4 relative">
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between">
-            <div className="text-xl md:text-2xl font-bold text-gray-800">Light House Baptive Church - Bronx</div>
+            <div className="text-xl md:text-2xl font-bold text-gray-800" >Light House Baptive Church - Bronx</div>
             {/* Mobile Menu Button */}
             <button 
               className="md:hidden bg-darkgray text-white p-2 rounded-md hover:bg-gray-900 transition duration-300"
@@ -27,7 +27,7 @@ export default function ChurchLandingPage() {
               <li><a href="#services" className="text-gray-700 hover:text-gray-900">Services</a></li>
               <li><a href="#events" className="text-gray-700 hover:text-gray-900">Events</a></li>
               <li><a href="#contact" className="text-gray-700 hover:text-gray-900">Contact</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-gray-900">History</a></li>
+              {/* <li><a href="#" className="text-gray-700 hover:text-gray-900">History</a></li> */}
             </ul>
           </nav>
           {/* Mobile Menu */}
@@ -47,8 +47,8 @@ export default function ChurchLandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="py-12 md:py-20 text-center">
-        <div className="container mx-auto px-4">
+      <section id="home" className="py-12 md:py-20 text-center "> {/* bg-ChurchBG bg-no-repeat bg-center bg-contain md:bg-contain */}
+        <div className="container mx-auto px-4 ">
           <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">Welcome to Light House Baptive Church - Bronx</h1>
           <p className="text-lg md:text-xl text-gray-600 mb-8">A place of worship, community, and spiritual growth</p>
           <a href="#contact" className="bg-black text-white py-2 px-6 rounded-full hover:bg-gray-900 transition duration-300">Join Us</a>
@@ -89,7 +89,7 @@ export default function ChurchLandingPage() {
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
               <Calendar className="w-12 h-12 text-gray-700 mb-4" />
               <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Bible Study</h3>
-              <p className="text-gray-600">Wednesday evenings at 7:00 PM, we gather for in-depth Bible study.</p>
+              <p className="text-gray-600">Wednesday evenings at 7:00 PM and Bi-weekly Prayer service at 8:30-10:00 PM we gather for in-depth Bible study.</p>
             </div>
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
               <MapPin className="w-12 h-12 text-gray-700 mb-4" />
@@ -106,14 +106,14 @@ export default function ChurchLandingPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">Upcoming Events</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
-              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Summer Bible Camp</h3>
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">ICF Conference 2025</h3>
               <p className="text-gray-600 mb-2">Join us for a weekend at IFC Conference 2025. Theme: A passion for Christ.</p>
-              <p className="text-gray-700">Date: May 24-26, 2023</p>
+              <p className="text-gray-700">Date: May 24-26, 2025</p>
             </div>
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
-              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Community Outreach Day</h3>
-              <p className="text-gray-600 mb-2">Help us make a difference in our community.</p>
-              <p className="text-gray-700">Date: August 5, 2023</p>
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Baptism Service</h3>
+              <p className="text-gray-600 mb-2">Join us for a baptism service at Calvery temple, 198 W 1st St, Mt Vernon. 3:00 pm</p>
+              <p className="text-gray-700">Date: February 9, 2025</p>
             </div>
           </div>
         </div>
@@ -125,10 +125,10 @@ export default function ChurchLandingPage() {
           <div className="flex flex-wrap justify-between">
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
               <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-              <p>123 Church Street</p>
-              <p>Anytown, ST 12345</p>
-              <p>Phone: (123) 456-7890</p>
-              <p>Email: info@gracechurch.com</p>
+              <p>3721 White plain road</p>
+              <p>Bronx, NY 10467</p>
+              <p>Phone: (718) 652-6812</p>
+              {/* <p>Email: </p> */}
             </div>
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
               <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
@@ -143,8 +143,8 @@ export default function ChurchLandingPage() {
               <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
               <p>Follow us on social media for updates and inspiration.</p>
               <div className="flex space-x-4 mt-4">
-                <a href="#" className="text-white hover:text-gray-300">Facebook</a>
-                <a href="#" className="text-white hover:text-gray-300">Twitter</a>
+                <a href="https://www.facebook.com/lighthouse.baptistchurch.bronx" className="text-white hover:text-gray-300">Facebook</a>
+                {/* <a href="#" className="text-white hover:text-gray-300">Twitter</a> */}
                 <a href="https://www.youtube.com/channel/UCw7lzOsSQWCvuvlXN1p9m1A" className="text-white hover:text-gray-300">Youtube</a>
               </div>
             </div>

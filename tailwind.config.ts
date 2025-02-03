@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        ChurchBG: "url('images/Resized_Lighthouse_Baptist_Church.jpg')"
+      },
     },
   },
   plugins: [],
