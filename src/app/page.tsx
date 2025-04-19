@@ -100,7 +100,7 @@ export default function ChurchLandingPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">Upcoming Events</h2>
           <div className="container mx-auto px-4 flex justify-center py-4">
             <div className="w-full max-w-4xl rounded-lg shadow-lg overflow-hidden">
-              <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&src=anVkaXRoLmJyb3duODFAZ21haWwuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB&color=%237CB342" 
+              <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&src=anVkaXRoLmJyb3duODFAZ21haWwuY29t&color=%230B8043" 
                 className="w-full h-[600px] border-0">
               </iframe>
             </div>
