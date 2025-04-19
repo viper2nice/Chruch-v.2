@@ -13,8 +13,11 @@ export default {
         foreground: "var(--foreground)",
       },
       backgroundImage: {
-        ChurchBG: "url('images/Resized_Lighthouse_Baptist_Church.jpg')"
+        ChurchBG: "url('/images/Resized_Lighthouse_Baptist_Church.jpg')"
       },
+      // PastorPortrait: {
+      //   PastorPT: "url('images/Pastor_Portrait.jpg')"
+      // }
     },
   },
   plugins: [],
