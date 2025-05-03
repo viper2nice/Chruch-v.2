@@ -1,150 +1,136 @@
 "use client"
 import Image from 'next/image'
-import { Calendar, Clock, MapPin} from 'lucide-react'
+import { Calendar, Clock, MapPin, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import CalendarEvents from '@/components/CalendarEvents'
-
-
-
+import Footer from '@/components/Footer'
 
 export default function ChurchLandingPage() {
   const [isImageLoaded, setIsImageLoaded] = useState(false)
 
   return (
-    <div className="min-h-screen bg-gray-100">
-       
-      <div className= {`max-md:flex max-md:justify-center transition-all delay-[.3s] duration-[.8s] opacity-0 ease-in ${isImageLoaded ? 'opacity-100' : ''}`}>   
-        <Image src="/images/Resized_Lighthouse_Baptist_Church.jpg" alt="Church" width={500} height={300}  className=" shadow-lg w-full max-md:w-full  " 
-        onLoad={() => setIsImageLoaded(true)}
-        />
-      </div>
-      {/* Hero Section */}
-      <section id="home" className="py-12 md:py-20 text-center"> 
-        <div className="container mx-auto px-4 ">
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">Welcome to Light House Baptive Church - Bronx</h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-8">A place of worship, community, and spiritual growth</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 py-8">
-            <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
-              <Clock className="w-12 h-12 text-gray-700 mb-4"/>
-              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Sunday Worship</h3>
-              <p className="text-gray-600">Join us every Sunday at 10:00 AM for our Sunday school follow by 11:00 AM worship service.</p>
-            </div>
-            <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
-              <Calendar className="w-12 h-12 text-gray-700 mb-4" />
-              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Bible Study</h3>
-              <p className="text-gray-600">Wednesday evenings at 7:00 PM and Bi-weekly Prayer service at 8:30-10:00 PM we gather for in-depth Bible study.</p>
-            </div>
-            <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
-              <MapPin className="w-12 h-12 text-gray-700 mb-4" />
-              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Community Outreach</h3>
-              <p className="text-gray-600">We regularly organize community service event every third Saturday to help those in need.</p>
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Image with Overlay */}
+      <div className="relative">
+        <div className={`relative h-[60vh] w-full transition-all duration-1000 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`}>
+          <Image
+            src="/images/Resized_Lighthouse_Baptist_Church.jpg"
+            alt="Lighthouse Baptist Church"
+            fill
+            priority
+            className="object-cover brightness-75"
+            onLoad={() => setIsImageLoaded(true)}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent"></div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-white px-4">
+              <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4">Lighthouse Baptist Church</h1>
+              <p className="text-xl md:text-2xl font-light">Bronx, New York</p>
             </div>
           </div>
-          <a href="#contact" className="bg-black text-white py-2 px-6 rounded-full hover:bg-gray-900 transition duration-300">Join Us</a>
+        </div>
+      </div>
+
+      {/* Services Section */}
+      <section id="services" className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-4">Our Services</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Join us in worship and fellowship as we grow together in faith</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div className="bg-gray-50 p-4 rounded-lg w-16 h-16 flex items-center justify-center mb-6">
+                <Clock className="w-8 h-8 text-gray-700" />
+              </div>
+              <h3 className="text-xl font-serif font-semibold text-gray-800 mb-4">Sunday Worship</h3>
+              <p className="text-gray-600 mb-6">Join us every Sunday at 10:00 AM for Sunday school followed by 11:00 AM worship service.</p>
+              <a href="#contact" className="inline-flex items-center text-blue-600 hover:text-blue-700">
+                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+              </a>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div className="bg-gray-50 p-4 rounded-lg w-16 h-16 flex items-center justify-center mb-6">
+                <Calendar className="w-8 h-8 text-gray-700" />
+              </div>
+              <h3 className="text-xl font-serif font-semibold text-gray-800 mb-4">Bible Study</h3>
+              <p className="text-gray-600 mb-6">Wednesday evenings at 7:00 PM and bi-weekly Prayer service at 8:30-10:00 PM for in-depth Bible study.</p>
+              <a href="#contact" className="inline-flex items-center text-blue-600 hover:text-blue-700">
+                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+              </a>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div className="bg-gray-50 p-4 rounded-lg w-16 h-16 flex items-center justify-center mb-6">
+                <MapPin className="w-8 h-8 text-gray-700" />
+              </div>
+              <h3 className="text-xl font-serif font-semibold text-gray-800 mb-4">Community Outreach</h3>
+              <p className="text-gray-600 mb-6">We organize community service events every third Saturday to help those in need.</p>
+              <a href="#contact" className="inline-flex items-center text-blue-600 hover:text-blue-700">
+                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-12 md:py-20 bg-gray-200">
+      <section id="about" className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">About Us</h2>
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="w-full md:w-1/2 mb-8 md:mb-0 flex justify-center items-center ">
-              <Image src="/images/Pastor.jpg" alt="Church" width={500} height={300}  className="rounded-lg shadow-lg w-full max-md:w-1/2  " />
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="w-full md:w-1/2">
+              <Image
+                src="/images/Pastor.jpg"
+                alt="Pastor"
+                width={600}
+                height={400}
+                className="rounded-xl shadow-lg w-full"
+              />
             </div>
-            <div className="w-full md:w-1/2 md:pl-8">
-              <p className="text-gray-600 mb-4">
-                Light House Baptive Church is a welcoming community dedicated to spreading the love of Christ. 
-                We believe in fostering a supportive environment where everyone can grow in their faith journey.
-              </p>
-              <p className="text-gray-600">
-                Our mission is to serve our community, provide spiritual  guidance, and create a place where all feel welcome.
-              </p>
+            <div className="w-full md:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-6">About Our Church</h2>
+              <div className="space-y-4 text-gray-600">
+                <p>
+                  Lighthouse Baptist Church is a welcoming community dedicated to spreading the love of Christ.
+                  We believe in fostering a supportive environment where everyone can grow in their faith journey.
+                </p>
+                <p>
+                  Our mission is to serve our community, provide spiritual guidance, and create a place where all feel welcome.
+                </p>
+              </div>
+              <a href="#contact" className="mt-8 inline-block bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-300">
+                Contact Us
+              </a>
             </div>
           </div>
         </div>
       </section>
-
-
-      <div>
-        
-      </div>
-      {/* Services Section */}
-      {/* <section id="services" className="py-12 md:py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
-              <Clock className="w-12 h-12 text-gray-700 mb-4" />
-              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Sunday Worship</h3>
-              <p className="text-gray-600">Join us every Sunday at 10:00 AM for our Sunday school follow by 11:00 AM worship service.</p>
-            </div>
-            <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
-              <Calendar className="w-12 h-12 text-gray-700 mb-4" />
-              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Bible Study</h3>
-              <p className="text-gray-600">Wednesday evenings at 7:00 PM and Bi-weekly Prayer service at 8:30-10:00 PM we gather for in-depth Bible study.</p>
-            </div>
-            <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
-              <MapPin className="w-12 h-12 text-gray-700 mb-4" />
-              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">Community Outreach</h3>
-              <p className="text-gray-600">We regularly organize community service event every third Saturday to help those in need.</p>
-            </div>
-          </div>
-        </div>
-      </section> */} 
 
       {/* Events Section */}
-      <section id="events" className="py-12 md:py-20">
+      <section id="events" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">Upcoming Events</h2>
-          <div className="container mx-auto px-4 flex justify-center py-4">
-            <div className="w-full max-w-4xl rounded-lg shadow-lg overflow-hidden">
-              <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&src=anVkaXRoLmJyb3duODFAZ21haWwuY29t&color=%230B8043" 
-                className="w-full h-[600px] border-0">
-              </iframe>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-4">Upcoming Events</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Join us for our upcoming services and community events</p>
           </div>
-          <CalendarEvents />
-        </div>
-      </section>
 
-
-      {/* Footer */}
-      <footer id="contact" className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-between">
-            <div className="w-full md:w-1/3 mb-6 md:mb-0">
-              <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-              <p>3721 White plain road</p>
-              <p>Bronx, NY 10467</p>
-              <p>Phone: (718) 652-6812</p>
-              {/* <p>Email: </p> */}
-            </div>
-            <div className="w-full md:w-1/3 mb-6 md:mb-0">
-              <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-              <ul>
-                <li><a href="#home" className="hover:text-gray-300">Home</a></li>
-                <li><a href="#about" className="hover:text-gray-300">About</a></li>
-                <li><a href="#services" className="hover:text-gray-300">Services</a></li>
-                <li><a href="#events" className="hover:text-gray-300">Events</a></li>
-              </ul>
-            </div>
-            <div className="w-full md:w-1/3">
-              <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
-              <p>Follow us on social media for updates and inspiration.</p>
-              <div className="flex space-x-4 mt-4">
-                <a href="https://www.facebook.com/lighthouse.baptistchurch.bronx" className="text-white hover:text-gray-300">Facebook</a>
-                {/* <a href="#" className="text-white hover:text-gray-300">Twitter</a> */}
-                <a href="https://www.youtube.com/channel/UCw7lzOsSQWCvuvlXN1p9m1A" className="text-white hover:text-gray-300">YouTube</a>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="w-full">
+              <div className="rounded-xl shadow-lg overflow-hidden">
+                <iframe
+                  src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&src=anVkaXRoLmJyb3duODFAZ21haWwuY29t&color=%230B8043"
+                  className="w-full h-[600px] border-0"
+                />
               </div>
             </div>
-          </div>
-          <div className="mt-8 text-center">
-            <p>&copy; 2023 Lighthouse Baptist Church - Bronx. All rights reserved.</p>
+            <div className="w-full">
+              <CalendarEvents />
+            </div>
           </div>
         </div>
-      </footer>
+      </section>
     </div>
   )
 }
