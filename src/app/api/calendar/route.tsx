@@ -11,7 +11,7 @@ export async function GET() {
   try {
     // Get events from the calendar
     const response = await calendar.events.list({
-      calendarId: 'primary',
+      calendarId: 'judith.brown81@gmail.com',
       timeMin: new Date().toISOString(),
       maxResults: 10,
       singleEvents: true,

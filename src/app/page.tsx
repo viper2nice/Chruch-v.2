@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { Calendar, Clock, MapPin, ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import CalendarEvents from '@/components/CalendarEvents'
-import Footer from '@/components/Footer'
 
 export default function ChurchLandingPage() {
   const [isImageLoaded, setIsImageLoaded] = useState(false)
@@ -12,20 +11,20 @@ export default function ChurchLandingPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Image with Overlay */}
       <div className="relative">
-        <div className={`relative h-[60vh] w-full transition-all duration-1000 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`relative h-[50vh] md:h-screen w-full transition-all duration-1000 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`}>
           <Image
             src="/images/Resized_Lighthouse_Baptist_Church.jpg"
             alt="Lighthouse Baptist Church"
             fill
             priority
-            className="object-cover brightness-75"
+            className="object-contain md:object-cover brightness-75"
             onLoad={() => setIsImageLoaded(true)}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent"></div>
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white px-4">
-              <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4">Lighthouse Baptist Church</h1>
-              <p className="text-xl md:text-2xl font-light">Bronx, New York</p>
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold mb-2 md:mb-4">Lighthouse Baptist Church</h1>
+              <p className="text-lg sm:text-xl md:text-2xl font-light">Bronx, New York</p>
             </div>
           </div>
         </div>
