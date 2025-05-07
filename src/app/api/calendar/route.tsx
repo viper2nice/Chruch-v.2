@@ -1,10 +1,16 @@
 import { google } from 'googleapis';
 import { NextResponse } from 'next/server';
 
-// Initialize the Google Calendar API client
+// Initialize the Google Calendar API client with service account
 const calendar = google.calendar({
   version: 'v3',
-  auth: process.env.GOOGLE_API_KEY // You'll need to add this to your .env file
+  auth: new google.auth.GoogleAuth({
+    credentials: {
+      client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+      private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+    },
+    scopes: ['https://www.googleapis.com/auth/calendar.readonly'],
+  }),
 });
 
 export async function GET() {
@@ -22,6 +28,9 @@ export async function GET() {
     return NextResponse.json({ events });
   } catch (error) {
     console.error('Error fetching calendar events:', error);
-    return NextResponse.json({ error: 'Failed to fetch calendar events' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to fetch calendar events', details: error instanceof Error ? error.message : 'Unknown error' },
+      { status: 500 }
+    );
   }
 } 
