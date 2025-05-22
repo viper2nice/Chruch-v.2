@@ -1,22 +1,8 @@
 "use client"
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
 export default function Footer() {
-  const pathname = usePathname()
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-    e.preventDefault()
-    if (pathname !== '/') {
-      // If not on home page, navigate to home page first
-      window.location.href = `/${sectionId}`
-    } else {
-      const element = document.getElementById(sectionId)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    }
-  }
 
   return (
     <div className="sticky top-[100vh]">
@@ -43,32 +29,16 @@ export default function Footer() {
               </div>
             </div>
 
+            {/* Quick Links */}
             <div className="space-y-4">
               <h3 className="text-2xl font-serif font-semibold mb-6 border-b border-gray-700 pb-2">Quick Links</h3>
               <ul className="space-y-3">
                 <li><Link href="/" className="hover:text-gray-300 transition duration-300">Home</Link></li>
                 <li><Link href="/About" className="hover:text-gray-300 transition duration-300">About</Link></li>
-                <li>
-                  <a
-                    href="#services"
-                    onClick={(e) => handleScroll(e, 'services')}
-                    className="hover:text-gray-300 transition duration-300"
-                  >
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#events"
-                    onClick={(e) => handleScroll(e, 'events')}
-                    className="hover:text-gray-300 transition duration-300"
-                  >
-                    Events
-                  </a>
-                </li>
+                <li><Link href="/Contact" className="hover:text-gray-300 transition duration-300">Contact</Link></li>
               </ul>
             </div>
-
+            {/* Connect With Us */}
             <div className="space-y-4">
               <h3 className="text-2xl font-serif font-semibold mb-6 border-b border-gray-700 pb-2">Connect With Us</h3>
               <p className="text-gray-300">Follow us on social media for updates and inspiration.</p>

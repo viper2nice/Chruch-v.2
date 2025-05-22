@@ -59,16 +59,7 @@ export default function Navbar() {
                   Events
                 </a>
               </li>
-              <li>
-                <a
-                  href="#contact"
-                  onClick={(e) => handleSectionClick(e, 'contact')}
-                  className="text-gray-700 hover:text-gray-900 transition-colors"
-                >
-                  Contact
-                </a>
-              </li>
-              {/* <li><a href="#" className="text-gray-700 hover:text-gray-900">History</a></li> */}
+              <li><Link href="/Contact" className="text-gray-700 hover:text-gray-900 transition-colors">Contact</Link></li>
             </ul>
           </nav>
           {/* Mobile Menu */}
@@ -95,16 +86,7 @@ export default function Navbar() {
                     Events
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#contact"
-                    onClick={(e) => handleSectionClick(e, 'contact')}
-                    className="text-gray-700 hover:text-gray-900 block transition-colors"
-                  >
-                    Contact
-                  </a>
-                </li>
-                <li><a href="#" className="text-gray-700 hover:text-gray-900 block">History</a></li>
+                <li><Link href="/Contact" className="text-gray-700 hover:text-gray-900 block transition-colors">Contact</Link></li>
               </ul>
             </div>
           )}

@@ -99,7 +99,7 @@ export default function ChurchLandingPage() {
                   Our mission is to serve our community, provide spiritual guidance, and create a place where all feel welcome.
                 </p>
               </div>
-              <a href="#contact" className="mt-8 inline-block bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-300">
+              <a href="/Contact" className="mt-8 inline-block bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-300">
                 Contact Us
               </a>
             </div>
