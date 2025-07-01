@@ -11,20 +11,20 @@ export default function ChurchLandingPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Image with Overlay */}
       <div className="relative">
-        <div className={`relative h-[50vh] md:h-screen w-full transition-all duration-1000 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen w-full transition-all duration-1000 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`}>
           <Image
             src="/images/Resized_Lighthouse_Baptist_Church.jpg"
             alt="Lighthouse Baptist Church"
             fill
             priority
-            className="object-contain md:object-cover brightness-75"
+            className="object-cover brightness-75"
             onLoad={() => setIsImageLoaded(true)}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent"></div>
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white px-4">
-              <h1 className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold mb-2 md:mb-4">Lighthouse Baptist Church</h1>
-              <p className="text-lg sm:text-xl md:text-2xl font-light">Bronx, New York</p>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-2 md:mb-4">Lighthouse Baptist Church</h1>
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-light">Bronx, New York</p>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ export default function ChurchLandingPage() {
                 <Calendar className="w-8 h-8 text-gray-700" />
               </div>
               <h3 className="text-xl font-serif font-semibold text-gray-800 mb-4">Bible Study</h3>
-              <p className="text-gray-600 mb-6">Wednesday evenings at 7:00 PM and bi-weekly Prayer service at 8:30-10:00 PM for in-depth Bible study.</p>
+              <p className="text-gray-600 mb-6">Wednesday evenings at 7:00 PM and bi-weekly Prayer service at 8:30-10:00 PM. Tuesday morning, 10 AM, Prayer servies via phone</p>
               <a href="#contact" className="inline-flex items-center text-blue-600 hover:text-blue-700">
                 Learn more <ChevronRight className="w-4 h-4 ml-1" />
               </a>
@@ -92,11 +92,11 @@ export default function ChurchLandingPage() {
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-6">About Our Church</h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  Lighthouse Baptist Church is a welcoming community dedicated to spreading the love of Christ.
-                  We believe in fostering a supportive environment where everyone can grow in their faith journey.
+                  Lighthouse Baptist Church is a welcoming community of Christ-centered believers dedicated to spreading the love of God as modeled by our Savior, Jesus Christ.
+                  We believe in in fostering a supportive environment where everyone can grow in their faith.
                 </p>
                 <p>
-                  Our mission is to serve our community, provide spiritual guidance, and create a place where all feel welcome.
+                  Our mission is to serve our community, meeting physical and spiritual needs, providing spiritual guidance, and creating a place where all can hear and learn from the word of God.
                 </p>
               </div>
               <a href="/Contact" className="mt-8 inline-block bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-300">
