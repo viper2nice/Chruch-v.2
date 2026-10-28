@@ -47,7 +47,7 @@ export default function About() {
             {/* Pastor Ketchens */}
             <div className="flex flex-col md:flex-row items-center gap-8 p-8 bg-white rounded-xl shadow-sm">
               <Avatar className="h-32 w-32 flex-shrink-0">
-                <AvatarImage src="/images/Resized_Lighthouse_Baptist_Church.jpg" alt="Pastor Ketchens" />
+                <AvatarImage src="/images/Rev_Ketchens.png" alt="Pastor Ketchens" />
                 <AvatarFallback>PK</AvatarFallback>
               </Avatar>
               <div className="text-left space-y-4">
